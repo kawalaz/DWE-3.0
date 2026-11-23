@@ -1,0 +1,39 @@
+{
+  "_note": "Reference values only. The server does not load this file yet: use the command-line flags (dwe_server --help).",
+  "server_name": "DWE Development Server",
+  "bind_address": "0.0.0.0",
+  "udp_port": 27015,
+  "protocol_version": 2,
+  "max_datagram_bytes": 1200,
+  "max_sessions": 128,
+  "session_idle_timeout_seconds": 15,
+  "simulation_tick_hz": 30,
+  "reliability": {
+    "window_messages": 64,
+    "send_backlog_messages": 256,
+    "max_retransmits_without_progress": 10,
+    "fast_retransmit_threshold": 3,
+    "initial_rto_ms": 250,
+    "min_rto_ms": 100,
+    "max_rto_ms": 2000,
+    "max_reorder_buffer_bytes": 32768
+  },
+  "client": {
+    "keepalive_interval_ms": 500,
+    "server_timeout_ms": 10000,
+    "connect_timeout_ms": 5000
+  },
+  "rate_limits": {
+    "packets_per_second_per_endpoint": 200,
+    "packet_burst": 400,
+    "bytes_per_second_per_endpoint": 262144,
+    "byte_burst": 524288,
+    "hello_per_second_per_endpoint": 2,
+    "hello_burst": 6,
+    "new_sessions_per_second_global": 1000,
+    "new_session_burst": 2000,
+    "max_tracked_endpoints": 65536
+  },
+  "socket_buffers": { "receive_bytes": 4194304, "send_bytes": 1048576 },
+  "environment": "development"
+}
